@@ -38,4 +38,5 @@ def predict():
     return render_template('index.html', prediction_text=prediction_text)
 
 if __name__ == '__main__':
-     serve(app, host='0.0.0.0', port=10000)
+       app.run(debug=True, port=8080)
+
