@@ -1,0 +1,112 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 700px; 
+    background-color: white;
+    padding: 60px; 
+    border-radius: 15px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.04);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+h2 {
+    color: #333;
+    font-size: 2.5rem; 
+    margin-bottom: 25px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+label {
+    font-size: 1.5rem; 
+    color: #555;
+}
+
+input[type="number"] {
+    padding: 16px;
+    font-size: 1.3rem; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); 
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #4facfe;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25); 
+}
+
+/* Button Styling */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 48%;
+    padding: 16px;
+    font-size: 1.2rem; 
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+button[type="reset"] {
+    background-color: #f44336;
+    color: white;
+}
+
+button[type="reset"]:hover {
+    background-color: #d32f2f;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+/* Result Styling */
+.result {
+    margin-top: 40px;
+    font-size: 1.8rem; 
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    background: #f0f8ff;
+    padding: 25px; 
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}

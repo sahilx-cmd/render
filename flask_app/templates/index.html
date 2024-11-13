@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Down Syndrome Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        // Function to clear the prediction result
+        function resetForm() {
+            document.getElementById("eyetoeye").value = "";
+            document.getElementById("eyetomouth").value = "";
+            document.getElementById("prediction_result").textContent = "";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Down Syndrome Prediction</h2>
+        <form method="POST" action="/predict" onreset="resetForm()">
+            <h2><label for="eyetoeye">Eye to Eye Distance:</label></h2>
+            <input type="number" step="any" id="eyetoeye" name="eyetoeye" placeholder="Enter distance" required>
+
+            <h2><label for="eyetomouth">Eye to Mouth Distance:</label></h2>
+            <input type="number" step="any" id="eyetomouth" name="eyetomouth" placeholder="Enter distance" required>
+
+            <div class="button-container">
+                <button type="submit">Predict</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+        {% if prediction_text %}
+        <h2 id="prediction_result" class="result">{{ prediction_text }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+
